@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Letha shoe company. Boots and Brogues made by a traditional handcrafting technique and sustainable eco friendly leather">
+		<meta name="keywords" content="Boots, Brogues, Shoes, Mens Fashion, Eco Friendly, Sustainable">
+		<meta name="author" content="Letha Inc">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/custom/style.css">
+		<link rel="stylesheet" href="../css/custom/media-queries.css">
+		
+		<link rel="icon" href="../images/graphics/logo.png">
+		<title>LEATHA | BUY BROGUES</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-default navbar-fixed-top">
+  				<div class="container-fluid">
+    				<div class="navbar-header">
+      					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>                        
+      					</button>
+      					<a data-toggle="modal" data-target="#index" class="navbar-brand" href="#">LETHA</a>
+    				</div><!--header-->
+    				<div class="collapse navbar-collapse" id="myNavbar">
+      					<ul class="nav navbar-nav">
+        					<li><a data-toggle="modal" data-target="#index" href="#"><i class="fas fa-home"></i> Home</a></li>
+							<li class="active"><a data-toggle="modal" data-target="#category" href="#"><i class="fas fa-shopping-cart"></i> Products</a></li>
+							<li><a data-toggle="modal" data-target="#contact-modal" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+							<li><a data-toggle="modal" data-target="#about" href="#"><i class="fas fa-info-circle"></i> About</a></li>
+						</ul>
+    				</div><!--collapse-->
+  				</div><!--container-->
+			</nav>
+			<ul class="breadcrumb">
+    			<li><a data-toggle="modal" data-target="#index" href="#">Home</a></li>
+				<li><a data-toggle="modal" data-target="#category" href="#">Products</a></li>
+				<li><a data-toggle="modal" data-target="#brogues" href="#">Brogues</a></li>
+    			<li class="active">Buy Brogues</li>
+			</ul>
+		</header>
+		
+		<main>
+			<div class="container no-margin-bottom">
+				<div class="row margin clearfix">
+					<div class="col-md-6 white text-center no-margin-left-right">
+						<div class="col-shoes">
+							<h1 class="size-3em">Brogues</h1>
+							<hr class="white">
+							<img class="img-responsive" src="../images/photos/brogues-small.png" alt="brogues">
+							<p class="size-2em">Size: 40</p>
+							<p class="size-2em">Price: NOK4500,-</p>
+						</div><!--col-shoes-->
+					</div><!--column-->
+					<div class="col-md-6 text-center no-margin-bottom no-margin-left-right">
+						<div class="col-shoes no-margin-bottom">
+							<h1 class="white size-4em">GREAT CHOICE</h1>
+							<hr class="white">
+							<p class="white size-2em">Now you just need to fill out the information below</p>
+							<div class="margin-form">
+								<div class="form-group">
+									<form action="buy-brogues-sucsess.html" id="contact">
+										<label for="name" class="white float-left size-1em">Name <span class="color-red">*</span></label>
+										<input class="form-control input-lg" id="name" type="text" name="name" placeholder="Enter your full name" required><br>
+
+										<label for="email" class="white float-left size-1em">E-mail <span class="color-red">*</span></label>
+										<input class="form-control input-lg" id="email" type="email" name="email" placeholder="Enter your e-mail adress" required><br>
+
+										<label for="street" class="white float-left size-1em">Street adress <span class="color-red">*</span></label>
+										<input class="form-control input-lg" id="street" type="text" name="street" placeholder="Enter your street adress" required><br>
+
+										<label for="zip" class="white float-left size-1em">Zip code <span class="color-red">*</span></label>
+										<input class="form-control input-lg" id="zip" type="text" name="zip" placeholder="Enter your zip code" required><br>
+										
+										<label for="city" class="white float-left size-1em">City <span class="color-red">*</span></label>
+										<input class="form-control input-lg" id="city" type="text" name="city" placeholder="Enter your city" required><br>
+										
+										<label for="country" class="white float-left size-1em">Country <span class="color-red">*</span></label>
+										<input class="form-control input-lg" id="country" type="text" name="country" placeholder="Enter your country" required><br>
+
+										<p class="float-left white"><span class="color-red">*</span> required</p>
+
+										<button type="submit" class="btn btn-primary button-shoes">BUY</button>
+									</form>
+								</div><!--form-group-->
+							</div><!--margin-form-->
+						</div><!--col-shoes-->
+					</div><!--column-->
+				</div><!--row-->
+			</div><!--container-->
+		</main>		
+		<footer class="bg-dark"><p>Copyright letha 2018 &copy;</p></footer>	
+		
+		<!-- Modal -->
+		<div class="modal fade" id="index" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
+					</div>
+					<div class="modal-body">
+						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
+						<p><a href="index.html">Leave the page</a></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="category" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
+					</div>
+					<div class="modal-body">
+						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
+						<p><a href="category.html">Leave the page</a></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="contact-modal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
+					</div>
+					<div class="modal-body">
+						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
+						<p><a href="contact.html">Leave the page</a></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="about" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
+					</div>
+					<div class="modal-body">
+						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
+						<p><a href="about.html">Leave the page</a></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="brogues" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
+					</div>
+					<div class="modal-body">
+						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
+						<p><a href="boots.html">Leave the page</a></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	</body>
+</html>
