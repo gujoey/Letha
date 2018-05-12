@@ -219,15 +219,6 @@ select{
 	margin-top: 20%;
 }
 
-@media only screen and (max-width: 767px) {
-    .margin-top{
-		margin-top: 0em;
-	}
-	.margin-top-50{
-		/*margin-top: 0em;*/
-	}
-}
-
 .no-margin-left{
 	margin-left: 0 !important;
 	padding-left: 0 !important;
@@ -241,7 +232,7 @@ select{
 /*---------------*/
 
 .container-50{
-	width: 50%;
+	width: 35%;
 	margin: auto;
 }
 
@@ -254,22 +245,6 @@ select{
 	color: red;
 }
 
-/*--inline-validation--*/
-input:invalid {
-            border: 2px solid red;
-        }
-
-input:valid {
-    border: 2px solid green;
-}
-textarea:invalid {
-            border: 2px solid red;
-        }
-
-textarea:valid {
-    border: 2px solid green;
-}
-/*----------*/
 
 .text-left{
 	text-align: left;
@@ -357,5 +332,14 @@ img{
 .heading-size{
 	font-size: 1.5em;
 	margin-bottom: 0;
+}
+
+.form-control{
+	border-width: 3px !important;
+}
+
+.errorInline{
+	display: none;
+	color: red;
 }
 

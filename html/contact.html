@@ -10,65 +10,60 @@
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 		
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="../css/custom/style.css">
 		<link rel="stylesheet" href="../css/custom/media-queries.css">
 		
+		
 		<link rel="icon" href="../images/graphics/logo.png">
-		<title>LEATHA | CONTACT</title>
+		<title>LEATHA | CATEGORY</title>
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-default navbar-fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
   				<div class="container-fluid">
-    				<div class="navbar-header">
-      					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>                        
-      					</button>
-      					<a class="navbar-brand" href="index.html">LETHA</a>
-    				</div><!--header-->
-    				<div class="collapse navbar-collapse" id="myNavbar">
-      					<ul class="nav navbar-nav">
-        					<li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-							<li><a href="category.html"><i class="fas fa-shopping-cart"></i> Products</a></li>
-							<li class="active"><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-							<li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+					<a class="navbar-brand" href="#">LETHA</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   			 			<span class="navbar-toggler-icon"></span>
+  					</button>
+
+					<div class="collapse navbar-collapse" id="navbarNav">
+      					<ul class="navbar-nav mr-auto">
+        					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item active"><a class="nav-link" href="#">Shop</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 						</ul>
     				</div><!--collapse-->
   				</div><!--container-->
 			</nav>
-			<ul class="breadcrumb">
-    			<li><a href="index.html">Home</a></li>
-    			<li class="active">Contact</li>
-			</ul>
 		</header>
 		
 		<main>
-			<div class="container-50 no-margin-bottom">
-				<div class="row text-center margin col-bg-black no-margin-bottom">
-					<div class="col-md-12 no-margin-bottom">
-						<h1 class="size-4em white">Contact Us</h1>
-						<hr class="white">
+			<div class="container-50">
+				<div class="row">
+					<div class="col-lg-12">
+						<h1 class="text-center size-4em">Contact Us</h1>
 						<div class="margin-form">
 							<div class="form-group">
-								<form action="contact-sucsess.html" id="contact">
-									<label for="name" class="white float-left size-1em">Name <span class="color-red">*</span></label>
-									<input class="form-control input-lg" id="name" type="text" name="name" placeholder="Enter your full name" required><br>
+								<form action="contact-sucsess.html" onsubmit="return checkInputs();" id="contact">
+									<label for="name" class=" size-1em">Name <span class="color-red">*</span></label>
+									<span class="errorInline" id="nameError">Please fill in your name</span>
+									<input class="form-control form-control-lg" id="name" type="text" name="name" placeholder="Enter your full name"><br>
 
-									<label for="email" class="white float-left size-1em">E-mail <span class="color-red">*</span></label>
-									<input class="form-control input-lg" id="email" type="email" name="email" placeholder="Enter your e-mail adress" required><br>
+									<label for="email" class=" size-1em">E-mail <span class="color-red">*</span></label>
+									<span class="errorInline" id="emailError">Please fill in a valid email adress</span>
+									<input class="form-control form-control-lg" id="email" type="email" name="email" placeholder="Enter your e-mail adress"><br>
 
-									<label for="subject" class="white float-left size-1em">Subject <span class="color-red">*</span></label>
-									<input class="form-control input-lg" id="subject" type="text" name="subject" placeholder="Enter the subject" required><br>
+									<label for="subject" class=" size-1em">Subject <span class="color-red">*</span></label>
+									<span class="errorInline" id="subjectError">Please fill in a subject</span>
+									<input class="form-control form-control-lg" id="subject" type="text" name="subject" placeholder="Enter the subject"><br>
 									
-									<label for="comment" class="white float-left size-1em">Comment <span class="color-red">*</span></label>
-									<textarea id="comment" class="form-control" rows="7" name="comment" form="contact" placeholder="Enter your comment" required></textarea><br>
+									<label for="comment" class=" size-1em">Comment <span class="color-red">*</span></label>
+									<span class="errorInline" id="commentError">Please fill inn a comment</span>
+									<textarea id="comment" class="form-control form-control-lg" rows="7" name="comment" form="contact" placeholder="Enter your message"></textarea><br>
 									
-									<p class="float-left white"><span class="color-red">*</span> required</p>
-									
-									<button type="submit" class="btn btn-primary button-shoes">Send inquiry</button>
+									<button type="submit" class="custom-button">Send inquiry</button>
 								</form>
 							</div><!--form-group-->
 						</div><!--margin-form-->
@@ -76,9 +71,12 @@
 				</div><!--row-->
 			</div>
 		</main>		
-		<footer class="bg-dark"><p>Copyright letha 2018 &copy;</p></footer>	
+		<footer id="footer" class="footer bg-light text-center"><p class="no-margin-bottom">Copyright letha 2018 &copy;</p></footer>
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="../js/script.js"></script>
 	</body>
 </html>
+
