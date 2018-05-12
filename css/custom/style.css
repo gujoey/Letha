@@ -1,21 +1,9 @@
 
 body{
-	/*background: url('../../images/photos/bg-dark.jpg');*/
-	/*background: url('../../images/photos/bg-wood-1.jpeg');
-	background-repeat: repeat;
-	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
-  	background-size: cover;	
-	padding-top: 50px;
-	margin-bottom: 50px;
 	min-height: 100%;
-	height:100%;*/
+  	display: flex;
+  	flex-direction: column;
 	font-family: 'PT Sans', sans-serif;
-}
-
-body.bg-darker{
-	/*background: url('../../images/photos/bg-darker.jpg');*/
 }
 
 option{
@@ -74,9 +62,9 @@ hr.white{
 		margin-top: 0.5em;
 	}
 	
-	[class*="col-"] {
+	/*[class*="col-"] {
       margin-bottom: 2em;
-  }
+  }*/
 }
 
 .img-responsive {
@@ -88,35 +76,8 @@ hr.white{
 
 /*--footer--*/
 footer{
-  	position: fixed;
-  	right: 0;
-  	bottom: 0;
-  	left: 0;
-	text-align: center;
-  	padding: 0;
-  	margin: 0;
-	color: black;
-	background-color: white;
-	padding-top: 1em;
+  	padding: 1em 0 0 0; /*2em footer padding*/
  }
-
-
-/*--clear-fix--*/
-.clearfix:after {
-  	visibility: hidden;
-  	display: block;
-  	font-size: 0;
-  	content: " ";
-  	clear: both;
-  	height: 0;
-}
-.clearfix { display: inline-block; }
-/* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
-
-/*-------------------*/
 
 /*--navbar--*/
 .navbar-toggle{
@@ -138,7 +99,7 @@ footer{
 }
 .navbar-default .navbar-nav > li > a {
     color: #555;
-	margin: 0 1.3em 0 1.3em;
+	/*margin: 0 1.3em 0 1.3em;*/
 	font-size: 1.5em;
 }
 
@@ -209,10 +170,10 @@ footer{
 }
 /*--font-sizes--*/
 .size-1em{
-	font-size:1em;
+	font-size:1rem;
 }
 .size-1-5em{
-	font-size: 1.5em;
+	font-size: 1.5rem;
 }
 .size-2em{
 	font-size: 2em;
@@ -313,4 +274,42 @@ textarea:valid {
 	border: 2px solid #7A7979;
 	border-radius: 25px;
 	color: #7a7979;
+}
+
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+
+
+.center-right{
+	position: absolute;
+    top: 45%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+	width: auto;
+}
+
+.container-absolute{
+	position: relative;
+    text-align: center;
+    color: white;
+}
+
+.custom-button{
+	background-color: transparent;
+	color: white;
+	width: 150px;
+	height: 50px;
+	border-width: 3px;
+	border-color: white;
+}
+
+.custom-button:hover{
+	background-color: rgba(0,0,0,0.4);
+}
+
+img{
+	margin-top: 15px;
+	margin-bottom: 15px;
 }

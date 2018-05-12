@@ -1,51 +1,15 @@
-@media only screen and (max-width: 767px) {
-	/*.container-50{
-		width:99%;
-		margin: auto;
+@media only screen and (max-width: 768px) {
+	.center-right{
+		top: 50%;
+		left: 50%;
 	}
 	
-	.container{
-		padding:0;
+	
+	.size-1-5em{
+		font-size: 1rem;
 	}
 	
-	.no-margin-bottom{
-		margin-bottom: 0 !important;
-		padding-bottom: 0 !important;
+	.font-size{
+		font-size: 1.5rem;
 	}
-	
-	.col-md-4{
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
-	.no-margin-left-right{
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
-	
-	.col-md-12{
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
-	}
-	
-	.form-group{
-		margin-bottom: 0 !important;
-		padding-bottom: 0 !important;
-	}
-	
-	.margin-bottom{
-		margin-bottom: 0.5em;
-	}
-	.navbar-default .navbar-nav > li > a {
-		color: black;
-		margin: 0;
-	}
-	.white-responsive{
-		color:white;
-	}*/
 }
