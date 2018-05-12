@@ -1,5 +1,5 @@
 @media only screen and (max-width: 767px) {
-	.container-50{
+	/*.container-50{
 		width:99%;
 		margin: auto;
 	}
@@ -47,5 +47,5 @@
 	}
 	.white-responsive{
 		color:white;
-	}
+	}*/
 }
