@@ -346,3 +346,17 @@ img{
 .width-100{
 	width: 100%;
 }
+
+.product-button{
+	color: white;
+	background-color: black;
+	width: 100%;
+	height: 50px;
+}
+
+.product-button:hover{
+	color: black;
+	background-color: white;
+	border-color: black;
+	border-width: 3px;
+}

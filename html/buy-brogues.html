@@ -10,196 +10,92 @@
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 		
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-		<link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="../css/custom/style.css">
 		<link rel="stylesheet" href="../css/custom/media-queries.css">
 		
+		
 		<link rel="icon" href="../images/graphics/logo.png">
-		<title>LEATHA | BUY BROGUES</title>
+		<title>LEATHA | BROGUES</title>
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-default navbar-fixed-top">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
   				<div class="container-fluid">
-    				<div class="navbar-header">
-      					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>
-        					<span class="icon-bar"></span>                        
-      					</button>
-      					<a data-toggle="modal" data-target="#index" class="navbar-brand" href="#">LETHA</a>
-    				</div><!--header-->
-    				<div class="collapse navbar-collapse" id="myNavbar">
-      					<ul class="nav navbar-nav">
-        					<li><a data-toggle="modal" data-target="#index" href="#"><i class="fas fa-home"></i> Home</a></li>
-							<li class="active"><a data-toggle="modal" data-target="#category" href="#"><i class="fas fa-shopping-cart"></i> Products</a></li>
-							<li><a data-toggle="modal" data-target="#contact-modal" href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-							<li><a data-toggle="modal" data-target="#about" href="#"><i class="fas fa-info-circle"></i> About</a></li>
+					<a class="navbar-brand" href="index.html">LETHA</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+   			 			<span class="navbar-toggler-icon"></span>
+  					</button>
+
+					<div class="collapse navbar-collapse" id="navbarNav">
+      					<ul class="navbar-nav mr-auto">
+        					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item active"><a class="nav-link" href="category.html">Shop</a></li>
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 						</ul>
     				</div><!--collapse-->
   				</div><!--container-->
 			</nav>
-			<ul class="breadcrumb">
-    			<li><a data-toggle="modal" data-target="#index" href="#">Home</a></li>
-				<li><a data-toggle="modal" data-target="#category" href="#">Products</a></li>
-				<li><a data-toggle="modal" data-target="#brogues" href="#">Brogues</a></li>
-    			<li class="active">Buy Brogues</li>
-			</ul>
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+				<li class="breadcrumb-item"><a href="category.html">Category</a></li>
+				<li class="breadcrumb-item"><a href="brogues.html">Brogues</a></li>
+			  	<li class="breadcrumb-item active">Buy brogues</li>
+			</ol>
 		</header>
 		
 		<main>
-			<div class="container no-margin-bottom">
-				<div class="row margin clearfix">
-					<div class="col-md-6 white text-center no-margin-left-right">
-						<div class="col-shoes">
-							<h1 class="size-3em">Brogues</h1>
-							<hr class="white">
-							<img class="img-responsive" src="../images/photos/brogues-small.png" alt="brogues">
-							<p class="size-2em">Size: 40</p>
-							<p class="size-2em">Price: NOK4500,-</p>
-						</div><!--col-shoes-->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<img class="img-fluid" src="../images/photos/brogues-2.jpeg" alt="brogues">
+						<p class="text-center size-2em"><strong>NOK4500,-</strong></p>
 					</div><!--column-->
-					<div class="col-md-6 text-center no-margin-bottom no-margin-left-right">
-						<div class="col-shoes no-margin-bottom">
-							<h1 class="white size-4em">GREAT CHOICE</h1>
-							<hr class="white">
-							<p class="white size-2em">Now you just need to fill out the information below</p>
-							<div class="margin-form">
-								<div class="form-group">
-									<form action="buy-brogues-sucsess.html" id="contact">
-										<label for="name" class="white float-left size-1em">Name <span class="color-red">*</span></label>
-										<input class="form-control input-lg" id="name" type="text" name="name" placeholder="Enter your full name" required><br>
+					<div class="col-lg-6">
+						<h1 class="">GREAT CHOICE</h1>
+						<p class="">Now you just need to fill out the information below</p>
+						<div class="margin-form">
+							<div class="form-group">
+								<form action="buy-brogues-sucsess.html" onsubmit="return checkInputsBuy();" id="contact">
+									<label for="name" class="">Name <span class="color-red">*</span></label>
+									<span class="errorInline" id="nameError">Please fill in your name</span>
+									<input class="form-control input-lg" id="name" type="text" name="name" placeholder="Enter your full name"><br>
 
-										<label for="email" class="white float-left size-1em">E-mail <span class="color-red">*</span></label>
-										<input class="form-control input-lg" id="email" type="email" name="email" placeholder="Enter your e-mail adress" required><br>
+									<label for="email" class="">E-mail <span class="color-red">*</span></label>
+									<span class="errorInline" id="emailError">Please fill in a valid email adress</span>
+									<input class="form-control input-lg" id="email" type="email" name="email" placeholder="Enter your e-mail adress"><br>
 
-										<label for="street" class="white float-left size-1em">Street adress <span class="color-red">*</span></label>
-										<input class="form-control input-lg" id="street" type="text" name="street" placeholder="Enter your street adress" required><br>
+									<label for="street" class="">Street adress <span class="color-red">*</span></label>
+									<span class="errorInline" id="adressError">Please fill in your street adress</span>
+									<input class="form-control input-lg" id="adress" type="text" name="street" placeholder="Enter your street adress"><br>
 
-										<label for="zip" class="white float-left size-1em">Zip code <span class="color-red">*</span></label>
-										<input class="form-control input-lg" id="zip" type="text" name="zip" placeholder="Enter your zip code" required><br>
-										
-										<label for="city" class="white float-left size-1em">City <span class="color-red">*</span></label>
-										<input class="form-control input-lg" id="city" type="text" name="city" placeholder="Enter your city" required><br>
-										
-										<label for="country" class="white float-left size-1em">Country <span class="color-red">*</span></label>
-										<input class="form-control input-lg" id="country" type="text" name="country" placeholder="Enter your country" required><br>
+									<label for="zip" class="">Zip code <span class="color-red">*</span></label>
+									<span class="errorInline" id="zipError">Please fill in your zip code</span>
+									<input class="form-control input-lg" id="zip" type="text" name="zip" placeholder="Enter your zip code"><br>
 
-										<p class="float-left white"><span class="color-red">*</span> required</p>
+									<label for="city" class="">City <span class="color-red">*</span></label>
+									<span class="errorInline" id="cityError">Please fill in your city</span>
+									<input class="form-control input-lg" id="city" type="text" name="city" placeholder="Enter your city"><br>
 
-										<button type="submit" class="btn btn-primary button-shoes">BUY</button>
-									</form>
-								</div><!--form-group-->
-							</div><!--margin-form-->
-						</div><!--col-shoes-->
+									<label for="country" class="">Country <span class="color-red">*</span></label>
+									<span class="errorInline" id="countryError">Please fill in your country</span>
+									<input class="form-control input-lg" id="country" type="text" name="country" placeholder="Enter your country"><br>
+									
+									<button type="submit" class="product-button">BUY</button>
+								</form>
+							</div><!--form-group-->
+						</div><!--margin-form-->
 					</div><!--column-->
 				</div><!--row-->
 			</div><!--container-->
-		</main>		
-		<footer class="bg-dark"><p>Copyright letha 2018 &copy;</p></footer>	
-		
-		<!-- Modal -->
-		<div class="modal fade" id="index" role="dialog">
-			<div class="modal-dialog">
+		</main>
 
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
-					</div>
-					<div class="modal-body">
-						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
-						<p><a href="index.html">Leave the page</a></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
-					</div>
-				</div>
-			</div>
-		</div>
+		<footer id="footer" class="footer bg-light text-center"><p class="no-margin-bottom">Copyright letha 2018 &copy;</p></footer>
 		
-		<div class="modal fade" id="category" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
-					</div>
-					<div class="modal-body">
-						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
-						<p><a href="category.html">Leave the page</a></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="modal fade" id="contact-modal" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
-					</div>
-					<div class="modal-body">
-						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
-						<p><a href="contact.html">Leave the page</a></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="modal fade" id="about" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
-					</div>
-					<div class="modal-body">
-						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
-						<p><a href="about.html">Leave the page</a></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="modal fade" id="brogues" role="dialog">
-			<div class="modal-dialog">
-
-				<!-- Modal content-->
-				<div class="modal-content">
-					<div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal">&times;</button>
-						<h4 class="modal-title"><strong>You're about to leave this page</strong></h4>
-					</div>
-					<div class="modal-body">
-						<p>All of our products have a limited supply and if you leave this site we won't be able to hold this product for you!</p>
-						<p><a href="boots.html">Leave the page</a></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default button-shoes" data-dismiss="modal">Continue the purchase</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="../js/script.js"></script>
 	</body>
 </html>
