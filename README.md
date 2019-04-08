@@ -1,3 +1,3 @@
 # website for the mock company Letha
 
-Live site: https://gujoey.github.io/Letha/html/
+Live site: https://gujoey.github.io/letha-website/html/
